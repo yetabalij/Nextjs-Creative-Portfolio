@@ -5,11 +5,11 @@ import React from "react";
 const getIcon = (icon) => {
   switch (icon) {
     case "home":
-      return <Home className="w-full h-auto" strokewidth={1.5} />;
+      return <Home className="w-full h-auto" strokeWidth={1.5} />;
       break;
 
     default:
-      return <Home className="w-full h-auto" strokewidth={1.5} />;
+      return <Home className="w-full h-auto" strokeWidth={1.5} />;
   }
 };
 
