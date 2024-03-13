@@ -1,4 +1,13 @@
-import { Home } from "lucide-react";
+import {
+  Github,
+  Home,
+  Linkedin,
+  Notebook,
+  Palette,
+  Phone,
+  Twitter,
+  User,
+} from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -6,7 +15,20 @@ const getIcon = (icon) => {
   switch (icon) {
     case "home":
       return <Home className="w-full h-auto" strokeWidth={1.5} />;
-      break;
+    case "about":
+      return <User className="w-full h-auto" strokeWidth={1.5} />;
+    case "Projects":
+      return <Palette className="w-full h-auto" strokeWidth={1.5} />;
+    case "contact":
+      return <Phone className="w-full h-auto" strokeWidth={1.5} />;
+    case "github":
+      return <Github className="w-full h-auto" strokeWidth={1.5} />;
+    case "linkedin":
+      return <Linkedin className="w-full h-auto" strokeWidth={1.5} />;
+    case "twitter":
+      return <Twitter className="w-full h-auto" strokeWidth={1.5} />;
+    case "resume":
+      return <Notebook className="w-full h-auto" strokeWidth={1.5} />;
 
     default:
       return <Home className="w-full h-auto" strokeWidth={1.5} />;
@@ -20,7 +42,16 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
       style={{ transform: `translate(${x},${y})` }}
     >
       <Link
-        className="text-forground rounded-full flex items-center justify-center"
+        className="
+        text-forground 
+        rounded-full 
+        flex items-center 
+        justify-center 
+        bg-background/20 
+        border 
+        border-accent/30 
+        border-solid 
+        backdrop-blur-[6px]"
         aria-label={label}
         href={link}
         target={newTab ? "_blank" : "_self"}
