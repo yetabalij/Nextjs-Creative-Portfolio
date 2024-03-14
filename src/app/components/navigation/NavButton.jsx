@@ -42,6 +42,8 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
       style={{ transform: `translate(${x},${y})` }}
     >
       <Link
+        href={link}
+        target={newTab ? "_blank" : "_self"}
         className="
         text-forground 
         rounded-full 
@@ -51,10 +53,12 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
         border 
         border-accent/30 
         border-solid 
-        backdrop-blur-[6px]"
+        backdrop-blur-[6px]
+        shadow-glass-inset 
+        hover:shadow-glass-sm
+        "
         aria-label={label}
-        href={link}
-        target={newTab ? "_blank" : "_self"}
+        name={label}
       >
         <span className="relative w-14 h-14 p-4">{getIcon(icon)}</span>
       </Link>
