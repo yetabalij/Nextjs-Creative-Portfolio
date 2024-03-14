@@ -17,7 +17,7 @@ const getIcon = (icon) => {
       return <Home className="w-full h-auto" strokeWidth={1.5} />;
     case "about":
       return <User className="w-full h-auto" strokeWidth={1.5} />;
-    case "Projects":
+    case "projects":
       return <Palette className="w-full h-auto" strokeWidth={1.5} />;
     case "contact":
       return <Phone className="w-full h-auto" strokeWidth={1.5} />;
