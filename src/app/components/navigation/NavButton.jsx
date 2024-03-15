@@ -45,7 +45,7 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
         href={link}
         target={newTab ? "_blank" : "_self"}
         className="
-        text-white 
+        text-white group: 
         rounded-full 
         flex items-center 
         justify-center 
@@ -60,7 +60,7 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
         aria-label={label}
         name={label}
       >
-        <span className="relative w-14 h-14 p-4 animate-spin-slow-reverse">
+        <span className="relative w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause">
           {getIcon(icon)}
         </span>
       </Link>
