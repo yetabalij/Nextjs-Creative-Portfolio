@@ -1,7 +1,7 @@
 import Image from "next/image";
-import bg from "../../../public/background/Projects-background.png";
-import Project from "../components/project/Project";
-import { projectsData } from "../data";
+import bg from "../../../../public/background/Projects-background.png";
+import Project from "../../components/project/Project";
+import { projectsData } from "../../data";
 
 export default function Home() {
   return (
