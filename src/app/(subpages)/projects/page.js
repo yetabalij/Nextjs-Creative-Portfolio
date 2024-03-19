@@ -5,10 +5,7 @@ import { projectsData } from "../../data";
 
 export default function Home() {
   return (
-    <main
-      className="flex min-h-screen flex-col 
-    items-center justify-between relative text-white"
-    >
+    <>
       <Image
         src={bg}
         alt="background-image"
@@ -17,6 +14,6 @@ export default function Home() {
       />
       <Project projects={projectsData} />
       <div className="flex items-center justify-center fixed top-0 -left-[650px] h-screen w-full"></div>
-    </main>
+    </>
   );
 }
