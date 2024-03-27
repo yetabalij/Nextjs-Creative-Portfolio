@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const AboutDetails = () => {
@@ -29,6 +30,30 @@ const AboutDetails = () => {
         flex items-center justify-center font-semibold text-3xl"
         >
           4+ <sub className="font-semibold text-base"> Years of experience</sub>
+        </div>
+        <div className="col-span-4 !p-0 custom-bg">
+          <img
+            className="w-full h-auto"
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=yetabalij&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false"
+            alt="git"
+            loading="lazy"
+          />
+        </div>
+        <div className="col-span-8 !p-0 custom-bg">
+          <img
+            className="w-full h-auto"
+            src="https://github-readme-stats.vercel.app/api?username=yetabalij&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false"
+            alt="git"
+            loading="lazy"
+          />
+        </div>
+        <div className="custom-bg col-span-full px-12 py-6">
+          <img
+            className="w-full h-auto"
+            src="https://skillicons.dev/icons?i=js,react,nextjs,redux,nodejs,express,ts,npm,mongodb,html,css,tailwind,styledcomponents,mysql,postgres,bootstrap,figma,xd,postman,ps,c,cpp,git,github,gitlab,heroku,netlify,linux,materialui,wordpress"
+            alt="git"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
