@@ -62,6 +62,14 @@ const AboutDetails = () => {
             loading="lazy"
           />
         </div>
+        <div className="col-span-6 !p-0 custom-bg">
+          <img
+            className="w-full h-auto"
+            src="https://github-readme-stats.vercel.app/api/pin/?username=yetabalij&repo=bookingapp&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false"
+            alt="git"
+            loading="lazy"
+          />
+        </div>
       </div>
     </section>
   );
