@@ -55,6 +55,13 @@ const AboutDetails = () => {
             loading="lazy"
           />
         </div>
+        <div className="custom-bg col-span-6 !p-0">
+          <img
+            src="https://github-readme-streak-stats.herokuapp.com?user=yetabalij&theme=dark&hide_border=true&type=png&background=FF5B5B00&ring=FEFE5B&currStreakLabel=FEFE5B"
+            alt="GitHub Streak"
+            loading="lazy"
+          />
+        </div>
       </div>
     </section>
   );
