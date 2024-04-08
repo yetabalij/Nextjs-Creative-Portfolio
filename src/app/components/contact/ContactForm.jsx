@@ -10,8 +10,9 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   return (
     <div>
@@ -27,6 +28,9 @@ const ContactForm = () => {
           className="w-full p-2 rounded-md shadow-lg text-white 
           focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
         />
+        {errors.Name && (
+          <span className="text-red-500">This field is required.</span>
+        )}
         <input
           type="text"
           placeholder="Email"
@@ -34,11 +38,17 @@ const ContactForm = () => {
           className="w-full p-2 rounded-md shadow-lg text-white 
           focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
         />
+        {errors.Email && (
+          <span className="text-red-500">This field is required.</span>
+        )}
         <textarea
           {...register("Message", { required: true, max: 998, min: 50 })}
           className="w-full p-2 rounded-md shadow-lg text-white 
           focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
         />
+        {errors.Message && (
+          <span className="text-red-500">This field is required.</span>
+        )}
 
         <input
           type="submit"
