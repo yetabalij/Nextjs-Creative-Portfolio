@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
@@ -10,8 +11,30 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm();
 
+  const [emailSuccess, setEmailSuccess] = useState("");
+
   const onSubmit = (data) => {
-    console.log(data);
+    emailjs
+      .send(
+        "service_nueqcbc",
+        "template_8298sam",
+        {
+          name: data.Name,
+          email: data.Email,
+          message: data.Message,
+        },
+        {
+          publicKey: "7yVan15b1BCo2_UNw",
+        }
+      )
+      .then(
+        (result) => {
+          setEmailSuccess(result.text);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   return (
@@ -21,6 +44,9 @@ const ContactForm = () => {
         className="flex flex-col space-y-4 max-w-md w-full 
         items-center justify-center"
       >
+        {emailSuccess == "OK" && (
+          <span className="text-green-500">Success Sending your message.</span>
+        )}
         <input
           type="text"
           placeholder="Name"
